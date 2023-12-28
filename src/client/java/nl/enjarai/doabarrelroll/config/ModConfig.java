@@ -170,7 +170,9 @@ public class ModConfig {
                 return true;
             }
 
-            return true;
+            return DoABarrelRollClient.HANDSHAKE_CLIENT.getConfig()
+                    .map(LimitedModConfigServer::allowThrusting)
+                    .orElse(false);
         }
 
         return false;
