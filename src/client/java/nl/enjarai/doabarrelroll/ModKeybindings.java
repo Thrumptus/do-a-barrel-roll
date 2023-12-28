@@ -137,7 +137,7 @@ public class ModKeybindings {
             }
         }
         while (TOGGLE_THRUST.wasPressed()) {
-            if (DoABarrelRollClient.HANDSHAKE_CLIENT.getConfig().map(LimitedModConfigServer::allowThrusting).orElse(false)) {
+            if (true) {
                 ModConfig.INSTANCE.setEnableThrust(!ModConfig.INSTANCE.getEnableThrust());
                 ModConfig.INSTANCE.save();
 
